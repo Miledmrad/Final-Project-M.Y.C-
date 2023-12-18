@@ -1,0 +1,70 @@
+.Rbody-color {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.registercont {
+    background-color: #f1eded !important;
+    width: 100%;
+    max-width: 700px;
+    height: 500px;
+    text-align: center;
+    box-shadow: 5px 6px 8px rgba(73, 72, 72, 0.67);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header {
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.input-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+.bgcol {
+    background-color: darkgrey;
+    border: 2px solid white;
+    border-radius: 20px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+}
+
+.input-icon {
+    margin-right: 0.5rem;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.btreg {
+    width: 130px;
+    color: white;
+    font-weight: bold;
+}
+
+.smbtn log {
+    text-decoration: none;
+    color: dodgerblue;
+}
+.Rbody-color .registercont .log{
+    padding-top: 0.7rem;
+}

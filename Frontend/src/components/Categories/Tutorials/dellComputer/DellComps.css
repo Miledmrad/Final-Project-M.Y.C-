@@ -1,0 +1,20 @@
+.maincardtutorial3.partutorial3 .parenttutorial3 .images{
+    width: 30rem;
+    height: 15%;
+
+}
+
+.maincardtutorial3{
+    animation: slide-down 2s ease-out;
+}
+@keyframes slide-down{
+    from{
+        transform: translateY(300px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}

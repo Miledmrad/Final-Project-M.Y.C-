@@ -1,0 +1,32 @@
+
+.formContainer{
+    display: grid;
+    place-items: center;
+    background-color: #000000;
+    border-radius: 25px;
+    width: fit-content;
+    font-size: 20px;
+}
+.formFeedBack{
+    padding: 20px 20px;
+}
+.formFeedBack input{
+    border: 2px solid white;
+    color: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+    width: 100%;
+}
+.formFeedBack textarea{
+    border: 2px solid white;
+    border-radius: 15px;
+    color: white;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: black;
+    margin-bottom: 15px;
+}
+.formFeedBack textarea:focus{
+   outline-color: transparent;
+}

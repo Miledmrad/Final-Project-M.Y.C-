@@ -1,0 +1,40 @@
+.maincardtutorial2.partutorial2 .parenttutorial2 .images{
+    width: 30rem;
+    height: 15%;
+
+}
+
+.downloadtutorial2{
+    display: flex;
+    justify-content: center;
+}
+.downloadtutorial2 .endofbtn{
+    text-decoration: none;
+    background-color: blue;
+    border: 2ps solid transparent;
+    border-radius: 25px;
+    width: 20%;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    color:white;
+    font-size: 15px; 
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+.downloadtutorial2 .endofbtn:hover{
+    transform: scale(1.2);
+} 
+.maincardtutorial2{
+    animation: slide-down 2s ease-out;
+}
+@keyframes slide-down{
+    from{
+        transform: translateY(300px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}

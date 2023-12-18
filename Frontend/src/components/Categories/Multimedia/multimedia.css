@@ -1,0 +1,18 @@
+.main1 .child1 button{
+    background-color:  darkgray;
+    border: none;
+    border-radius: 25px;
+}
+.multihead{
+    animation: slide-left 2s ease-out;
+}
+@keyframes slide-left {
+    from{
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

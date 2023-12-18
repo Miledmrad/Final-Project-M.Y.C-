@@ -1,0 +1,62 @@
+.footer{
+    background-color: black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: whitesmoke;
+
+}
+.footer .buildWeb h3{
+    font-size: 35px;
+}
+.footer .buildWeb p{
+    font-size: 25px;
+}
+.buildWebtwo button{
+    font-size: 25px;
+}
+.headerline{
+    color: lightslategray;
+}
+.footerbottom  p{
+    font-size: 20px;
+}
+.startFree{
+    background-color: lightslategray;
+    color: white;
+}
+.startFree:hover{
+    background-color: lightslategray;
+    color:white;
+}
+.buildWeSix input[type=text]{
+    outline: 2px white;
+    font-size: 18px;
+    padding: 0.8rem 0;
+    width: 67%;
+    border: 2px solid white;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding-left: 1rem;
+    color: black;
+    background-color: white;
+}
+.buildWeSix button{
+    height: 3.5rem;
+    width: 15%;
+    margin-bottom: 4px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.headerlineTwo{
+    color: black;
+    width: 90%;
+    margin-left: 3rem;
+}
+.copyright{
+    font-size: 24px;
+    margin-bottom: -2rem;
+    padding-bottom: 1rem;
+}
