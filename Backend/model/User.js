@@ -1,6 +1,6 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("../../../SoftwareDownloader/Backend/DB/configSqlz");
-
+const bcrypt = require('bcrypt');
 const User = sequelize.define('User', {
         user_id: {
             type: DataTypes.INTEGER,
@@ -24,7 +24,7 @@ const User = sequelize.define('User', {
             allowNull: false,
         },
         user_password: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(255),
             allowNull: false,
         },
         user_address: {
@@ -35,7 +35,6 @@ const User = sequelize.define('User', {
             type: DataTypes.DATE,
             allowNull: true,
             defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
-            //defaultValue: DataTypes.NOW,
         },
         role: {
             type: DataTypes.ENUM('user', 'admin', 'superuser'),
@@ -46,6 +45,13 @@ const User = sequelize.define('User', {
         tableName: "user",
         createdAt: false,
         updatedAt: false,
+        hooks: {
+            beforeCreate: (user) => {
+                user.user_password = user.user_password && user.user_password !== "" ?
+                    bcrypt.hashSync(user.user_password, 10) :
+                    "";
+            }
+        }
     }
 );
 
