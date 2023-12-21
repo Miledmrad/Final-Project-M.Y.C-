@@ -1,11 +1,24 @@
-import React from "react";
+import {React, useState} from "react";
 import {IoIosSend}  from "react-icons/io";
 import "./footer.css";
 import {Link} from "react-router-dom";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 const FooterJs = ()=>{
+    const [email, setEmail] = useState("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if ( email ) {
+            toast.success("Form submitted successfully!");
+            return;
+        }else{
+            toast.error("Please fill out all fields");
+        }
+    };
+
     return (
 
         <>
@@ -40,8 +53,11 @@ const FooterJs = ()=>{
                         <div className='buildWeSix col-md-4 col-sm-12 '>
                             <h3>Newsletter</h3>
                             <p>Subscribe newsletter to get updates..</p>
-                            <input className="inputype rounded-left" type="text" name="email" placeholder="Enter Your Email"/>
-                            <button className="buttonemailtwo btn btn-sm btn-secondary"><IoIosSend/></button>
+                            <form onSubmit={handleSubmit}><input id="emailInput" className="inputype rounded-left" type="email" name="email" placeholder="Enter Your Email"
+                                    value={email} onChange={(e) => setEmail(e.target.value)}/>
+                            <button type="submit" className="buttonemailtwo btn btn-sm btn-secondary"><IoIosSend/></button>
+                            <ToastContainer/>
+                            </form>
                         </div>
                     </div>
                 </div>

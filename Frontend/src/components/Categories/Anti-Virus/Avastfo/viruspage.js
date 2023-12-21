@@ -4,15 +4,19 @@ import "./viruspage.css"
 import {AiOutlineCloudDownload} from "react-icons/ai";
 import zipFile_URL from "../../../../Download/Avast.rar";
 
-export default function VirusPage() {
-    const downloadFileAtURl= (url)=>{
-    const fileName= url.split("/").pop();
-    const aTag = document.createElement("a");
-    aTag.href = url;
-    aTag.setAttribute("download",fileName);
-    document.body.appendChild(aTag);
-    aTag.click();
-    aTag.remove();
+export default function VirusPage({isLoggedIn}) {
+    const downloadFileAtURl = (url) => {
+        if (isLoggedIn) {
+            const aTag = document.createElement("a");
+            aTag.href = zipFile_URL;
+            aTag.setAttribute("download", "Avast_Anti-Malware_1.22.0.rar");
+            document.body.appendChild(aTag);
+            aTag.click();
+            document.body.removeChild(aTag);
+            alert('the file is downloading')
+        } else {
+            alert('Please log in to download the file.');
+        }
     };
     return (
         <>

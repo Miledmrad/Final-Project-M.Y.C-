@@ -112,8 +112,8 @@ function AppContent() {
                 <Route path="/" element={<Virus />} />
 
                 <Route path="/virus" element={<Virus />} />
-                <Route path="/Avastpage" element={<VirusPage />} />
-                <Route path="/smadav" element={<Smadav />} />
+                <Route path="/Avastpage" element={<VirusPage isLoggedIn={isLoggedIn} />} />
+                <Route path="/smadav" element={<Smadav  isLoggedIn={isLoggedIn}/>} />
                 <Route path="/iobitpage" element={<Iobit/>} />
                 <Route path="/auslogpage" element={<Auslog isLoggedIn={isLoggedIn} />} />
                 <Route path="/gridinpage" element={<Grid/>} />

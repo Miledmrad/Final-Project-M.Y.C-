@@ -2,8 +2,24 @@ import React from "react";
 import image2 from "../../../../assests/anti_virus/image2.jpg"
 import { AiOutlineCloudDownload } from "react-icons/ai";
 import "./Smadav.css";
+import zipFile_URL from "../../../../Download/Smadav..rar";
 
-export default function Smadav() {
+export default function Smadav({isLoggedIn}) {
+    const downloadFileAtURl = () => {
+        if (isLoggedIn) {
+            const aTag = document.createElement("a");
+            aTag.href = zipFile_URL;
+            aTag.setAttribute("download", "Avast_Anti-Malware_1.22.0.rar");
+            document.body.appendChild(aTag);
+            aTag.click();
+            document.body.removeChild(aTag);
+            alert('the file is downloading')
+        } else {
+            alert('Please log in to download the file.');
+        }
+    };
+
+
 
     return (
         <>
@@ -74,7 +90,7 @@ export default function Smadav() {
                     <b>the Passwor of zip File is : 123</b></p>
                     <br/>
                     <div className="download2 ">
-                    <button >
+                    <button onClick={()=>{downloadFileAtURl(zipFile_URL)}}>
                         Download Full Setup <AiOutlineCloudDownload/>
                     </button></div><br/>
                     
